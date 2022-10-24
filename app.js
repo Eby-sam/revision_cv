@@ -73,3 +73,72 @@ for (let i = 0; i < h3.length; i++) {
         h3[i].style.color = "blue";
     }, 2000);
 }
+
+if (document.getElementById("details1") && document.getElementById("details2")) {
+    nbClick("details1", "section1");
+    nbClick("details2", "section2");
+}
+
+// Retrieve a json file and display its content in HTML
+let xhr2 = new XMLHttpRequest();
+xhr2.open("GET", "first.json");
+xhr2.responseType = "json";
+
+xhr2.onload = function () {
+    let response = xhr2.response;
+
+    let createUl = document.createElement("ul");
+    let first =  document.getElementById("first");
+    first.prepend(createUl);
+
+    for (let i = 0; i < response.length; i++) {
+        let createLi = document.createElement("li");
+        createLi.innerHTML = response[i];
+        createUl.append(createLi);
+    }
+}
+xhr2.send();
+
+let xhr = new XMLHttpRequest();
+xhr.open("GET", "second.json");
+xhr.responseType = "json";
+
+xhr.onload = function () {
+    let response = xhr.response;
+
+    let createDl = document.createElement("dl");
+    let second =  document.getElementById("second");
+    second.prepend(createDl);
+
+    for (let i = 0; i < response.length; i++) {
+        let createDt = document.createElement("dt");
+        createDt.innerHTML = response[i][0];
+        createDl.append(createDt);
+        let createDd = document.createElement("dd");
+        createDd.innerHTML = response[i][1];
+        createDl.append(createDd);
+        if (createDd.innerHTML === response[3][1]) {
+            let createA = document.createElement("a");
+            createA.href = "https://github.com/ChloeArd";
+            createA.innerHTML = response[3][1];
+            let dd = document.querySelectorAll("dd");
+            dd[3].innerHTML = "";
+            dd[3].append(createA);
+        }
+    }
+}
+xhr.send();
+
+function nbClick(id1, id2) {
+    let click = 0;
+    document.getElementById(id1).addEventListener("click", function () {
+        if (click === 0) {
+            document.getElementById(id2).style.display = "none";
+            click++;
+        }
+        else {
+            document.getElementById(id2).style.display = "flex";
+            click = 0;
+        }
+    });
+}
