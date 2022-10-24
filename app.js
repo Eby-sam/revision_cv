@@ -64,11 +64,12 @@ for (let i = 0; i < h3.length; i++) {
         h3[i].style.textDecoration = "none"
         h3[i].style.opacity = "0.5";
         h3[i].style.backgroundColor = "bleu";
-    }, 2000);
+        h3[i].style.color = "red";
+    }, 1000);
 
     setInterval(function () {
         h3[i].style.textDecoration = "underline"
         h3[i].style.opacity = "1";
-        h3[i].style.backgroundColor = "transparent";
-    }, 6000);
+        h3[i].style.color = "blue";
+    }, 2000);
 }
