@@ -1,0 +1,48 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 65.5%;
+}
+
+#page {
+    border: 3px solid black;
+    background-color: #d5dfec;
+    border-radius: 10px;
+    padding: 2.5rem;
+    width: 70%;
+    margin-top: 5rem;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 1.5rem;
+}
+
+h1 {
+    font-style: italic;
+    font-size: 2rem;
+}
+
+section {
+    padding: 1rem;
+}
+
+header {
+    width: 100%;
+    padding: 5px;
+}
+
+.name {
+    text-align: center;
+    font-size: 4rem;
+    font-weight: bold;
+    font-style: italic;
+}
+
+.title {
+    text-align: center;
+    font-size: 3rem;
+    font-style: italic;
+}
