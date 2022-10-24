@@ -19,30 +19,3 @@ html {
     margin-right: auto;
     font-size: 1.5rem;
 }
-
-h1 {
-    font-style: italic;
-    font-size: 2rem;
-}
-
-section {
-    padding: 1rem;
-}
-
-header {
-    width: 100%;
-    padding: 5px;
-}
-
-.name {
-    text-align: center;
-    font-size: 4rem;
-    font-weight: bold;
-    font-style: italic;
-}
-
-.title {
-    text-align: center;
-    font-size: 3rem;
-    font-style: italic;
-}
